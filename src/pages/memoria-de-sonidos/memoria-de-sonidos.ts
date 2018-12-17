@@ -94,20 +94,17 @@ export class MemoriaDeSonidosPage {
   	var id = separated[separated.length-1].split('.')[0];
     if(this.canWin){
     	this.checkIfWinner(id, function(message, input:String, parent){
-    		if(message === 1){
-              console.log("Ganaste");
+    		if(message == 1){
               parent.images[parent.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
               setTimeout(()=>{
                 parent.changeDifficulty();
               },3000);
 	        }
-        	else if(message === 2){
+        	else if(message == 2){
             parent.images[parent.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
-	          console.log("encontraste uno");
 	          parent.winner.splice(parent.winner.indexOf (input+".mp3"),1);
 	        }
         	else{
-	          console.log("Fallaste");
             parent.images[parent.images.indexOf(imagen)] = "assets/img/Testa/De la app/Llorar.png";
         	}
     	})
@@ -138,6 +135,7 @@ export class MemoriaDeSonidosPage {
   	var found: boolean = false;
     for(var df = 0; df < this.winner.length && !found; df++){
       var current = this.winner[df].split('.')[0];
+      var message = 0;
       if(current === input){
         found = true;
         if(this.winner.length == 1) {
@@ -145,16 +143,18 @@ export class MemoriaDeSonidosPage {
               this.currentSounds[xy].pause();
           }
           //Ganaste
-          cb(1, input, this);
+
+          message = 1;
           this.canWin = false;
         }
         else{
           //Encontraste uno
-          cb(2, input, this);
+          message = 2
         }
   	  }
-      else cb(-1, input, this);
+      
   	}
+    cb(message, input, this);
   }
 
   changeDifficulty(){

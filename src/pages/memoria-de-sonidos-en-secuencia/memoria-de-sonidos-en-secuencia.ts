@@ -244,7 +244,6 @@ export class MemoriaDeSonidosEnSecuenciaPage {
       var number = images[winnerPositions[dx]].split('/');
       //winnerSounds[actualPosition] = images[winnerPositions[dx]].split(".jpg")[0] + ".mp3";
       winnerSounds[actualPosition] = "assets/sounds/" + category + '/' +  number[number.length-1].split('.')[0] + ".mp3";
-      console.log(winnerSounds);
       soundsPositions.splice(soundsPositions.indexOf(actualPosition),1);
     }
     return winnerSounds;
