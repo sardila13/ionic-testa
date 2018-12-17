@@ -1,0 +1,23 @@
+page-homedetail {
+  .scroll-content {
+    .content-detail-wrap {
+      text-align: center;
+      .sub-details {
+        margin-top: 10px;
+        margin-bottom: 6px;
+        color: $blue-48;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .sub-price {
+        margin-bottom: 6px;
+        font-size: 16px;
+        color: $gray-72;
+      }
+      .sub-discount {
+        color: $gray-89;
+        font-size: 16px;
+      }
+    }
+  }
+}
