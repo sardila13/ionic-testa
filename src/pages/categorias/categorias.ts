@@ -154,6 +154,7 @@ export class CategoriasPage {
         this.currentSound.pause();
         //console.log("Ganaste");
         //window.alert("Ganaste");
+        this.canWin = false;
         this.images[this.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
         setTimeout(()=>{
           this.selectWinner(this.rango, this.setImages);

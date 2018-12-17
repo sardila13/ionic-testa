@@ -169,6 +169,7 @@ export class FiguraFondoPage {
       this.checkIfisWinner(id,function(message, input, parent){
         if(message === 1){
             console.log("Ganaste")
+            this.canWin = false;
             parent.images[parent.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
             setTimeout(()=>{
               parent.selectWinner(parent.rango, parent.setImages);

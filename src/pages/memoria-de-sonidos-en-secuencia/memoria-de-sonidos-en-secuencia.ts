@@ -115,6 +115,7 @@ export class MemoriaDeSonidosEnSecuenciaPage {
         if(this.encontrados == this.sounds.length-1)
         {
           console.log("Ganaste");
+          this.canWin = false;
           this.images[this.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
           setTimeout(()=>{
             this.changeDifficulty();

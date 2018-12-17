@@ -22,11 +22,11 @@ webpackEmptyAsyncContext.id = 108;
 
 var map = {
 	"../pages/categorias/categorias.module": [
-		275,
+		274,
 		10
 	],
 	"../pages/content/content.module": [
-		274,
+		275,
 		9
 	],
 	"../pages/figura-fondo/figura-fondo.module": [
@@ -191,8 +191,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/categorias/categorias.module#CategoriasPageModule', name: 'CategoriasPage', segment: 'categorias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/figura-fondo/figura-fondo.module#FiguraFondoPageModule', name: 'FiguraFondoPage', segment: 'figura-fondo', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/identificacion-de-contextos-o-situaciones/identificacion-de-contextos-o-situaciones.module#IdentificacionDeContextosOSituacionesPageModule', name: 'IdentificacionDeContextosOSituacionesPage', segment: 'identificacion-de-contextos-o-situaciones', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/intrucciones-categorias/intrucciones-categorias.module#IntruccionesCategoriasPageModule', name: 'IntruccionesCategoriasPage', segment: 'intrucciones-categorias', priority: 'low', defaultHistory: [] },

@@ -76,6 +76,7 @@ export class IdentificacionDeContextosOSituacionesPage {
           this.selectWinnerCategory(this.rango, this.setImages);
         },3000);
         this.currentSound.pause();
+        this.canWin = false;
     		console.log("Ganaste");
     	}
     	else{

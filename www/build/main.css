@@ -25773,7 +25773,7 @@ page-content .opciones {
   max-width: 120px;
   height: 120px;
   width: 120px;
-  margin-right: 5px;
+  margin-right: 20px;
   border: 2px solid #FFF;
   border-radius: 20%;
 }
@@ -25792,7 +25792,7 @@ page-content .opciones {
 .chat-list-wrap .list .item .item-inner .label .chat-list-discount {
   display: inline-block;
   margin-top: 10px;
-  padding: 5px 5px;
+  padding: 8px 5px;
   color: #FFF;
   font-size: 16px;
   opacity: 1;

@@ -104,7 +104,6 @@ export class MemoriaDeSonidosPage {
         	else if(message === 2){
             parent.images[parent.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
 	          console.log("encontraste uno");
-	          var index: number = parent.winner.indexOf(input+".mp3");
 	          parent.winner.splice(parent.winner.indexOf (input+".mp3"),1);
 	        }
         	else{
@@ -147,6 +146,7 @@ export class MemoriaDeSonidosPage {
           }
           //Ganaste
           cb(1, input, this);
+          this.canWin = false;
         }
         else{
           //Encontraste uno

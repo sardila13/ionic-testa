@@ -1,6 +1,6 @@
 webpackJsonp([10],{
 
-/***/ 275:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriasPageModule", function() { return CategoriasPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__categorias__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__categorias__ = __webpack_require__(285);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var CategoriasPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -171,6 +171,7 @@ var CategoriasPage = /** @class */ (function () {
                 this.currentSound.pause();
                 //console.log("Ganaste");
                 //window.alert("Ganaste");
+                this.canWin = false;
                 this.images[this.images.indexOf(imagen)] = "assets/img/Testa/De la app/checkmark.png";
                 setTimeout(function () {
                     _this.selectWinner(_this.rango, _this.setImages);
@@ -219,11 +220,12 @@ var CategoriasPage = /** @class */ (function () {
     };
     CategoriasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-categorias',template:/*ion-inline-start:"/Users/dianasilva/Documents/Sebastian/Testa/App/Layout/src/pages/categorias/categorias.html"*/'<!--\n  Generated template for the CategoriasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Categorias</ion-title>\n  </ion-navbar>\n<div class="dificultades">\n    <ion-segment [(ngModel)]="dificultad" class="segmento">\n      <ion-segment-button value="facil" (click)="changeDifficulty()" style="color:white">\n        <p class="segmento-boton">Inicial</p>\n      </ion-segment-button>\n      <ion-segment-button value="intermedio" (click)="changeDifficulty()" style="color:white">\n        <p>Intermedio</p>\n      </ion-segment-button>\n      <ion-segment-button value="dificil" (click)="changeDifficulty()" style="color:white">\n        <p>Avanzado</p>\n      </ion-segment-button>     \n    </ion-segment>\n  </div>\n  <ion-item class="categorias">\n    <ion-label style="color:white">Categoria</ion-label>\n      <ion-select [(ngModel)]="category" (ionChange)="changeCategory()" style="color:white">\n          <ion-option value="{{categories[0]}}">{{categoriesFront[0]}}</ion-option>\n          <ion-option value="{{categories[1]}}">{{categoriesFront[1]}}</ion-option>\n          <ion-option value="{{categories[2]}}">{{categoriesFront[2]}}</ion-option>\n          <ion-option value="{{categories[3]}}">{{categoriesFront[3]}}</ion-option>\n          <ion-option value="{{categories[4]}}">{{categoriesFront[4]}}</ion-option>\n          <ion-option value="{{categories[5]}}">{{categoriesFront[5]}}</ion-option>\n      </ion-select>\n  </ion-item>\n</ion-header>\n\n\n<ion-content padding class="content">\n	\n    \n    <div class="chat-list-wrap {{layout}}">\n      <ion-list>\n        <ion-item  *ngFor="let image of images" (click)="selectImage(image, $event)" style="background-color: #1B3255">\n          <img style="background-color: #1B3255"   src="{{image}}">\n          <!-- <div class="chat-list-title">{{chat.name}}</div>\n          <div class="chat-list-sub-title">{{chat.lastText}}</div>\n          <div class="chat-list-price"><strong>Rs. {{chat.price}}</strong></div>\n          <div class="chat-list-discount">{{chat.discout}} OFF </div> -->\n        </ion-item>\n      </ion-list>\n    </div>\n</ion-content>\n<ion-footer style="padding-top: 1em; padding-bottom: 1em">\n  <button class="center" ion-button round icon-left (click)="playSound()">\n      <div style="margin-top:5%; margin-bottom:5%">\n        <ion-icon name="volume-up" style="margin-right: 5%"></ion-icon>Reproducir sonido\n      </div>\n  </button>\n</ion-footer>\n'/*ion-inline-end:"/Users/dianasilva/Documents/Sebastian/Testa/App/Layout/src/pages/categorias/categorias.html"*/,
+            selector: 'page-categorias',template:/*ion-inline-start:"/Users/dianasilva/Documents/Sebastian/Testa/App/Layout/src/pages/categorias/categorias.html"*/'<!--\n  Generated template for the CategoriasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Categorias</ion-title>\n  </ion-navbar>\n<div class="dificultades">\n    <ion-segment [(ngModel)]="dificultad" class="segmento">\n      <ion-segment-button value="facil" (click)="changeDifficulty()" style="color:white">\n        <p class="segmento-boton">Inicial</p>\n      </ion-segment-button>\n      <ion-segment-button value="intermedio" (click)="changeDifficulty()" style="color:white">\n        <p>Intermedio</p>\n      </ion-segment-button>\n      <ion-segment-button value="dificil" (click)="changeDifficulty()" style="color:white">\n        <p>Avanzado</p>\n      </ion-segment-button>     \n    </ion-segment>\n  </div>\n  <ion-item class="categorias">\n    <ion-label style="color:white">Categoria</ion-label>\n      <ion-select [(ngModel)]="category" (ionChange)="changeCategory()" style="color:white">\n          <ion-option value="{{categories[0]}}">{{categoriesFront[0]}}</ion-option>\n          <ion-option value="{{categories[1]}}">{{categoriesFront[1]}}</ion-option>\n          <ion-option value="{{categories[2]}}">{{categoriesFront[2]}}</ion-option>\n          <ion-option value="{{categories[3]}}">{{categoriesFront[3]}}</ion-option>\n          <ion-option value="{{categories[4]}}">{{categoriesFront[4]}}</ion-option>\n          <ion-option value="{{categories[5]}}">{{categoriesFront[5]}}</ion-option>\n      </ion-select>\n  </ion-item>\n</ion-header>\n\n\n<ion-content padding class="content">\n	\n    \n    <div class="chat-list-wrap {{layout}}">\n      <ion-list>\n        <ion-item  *ngFor="let image of images" (click)="selectImage(image, $event)" style="background-color: #1B3255">\n          <img style="background-color: #1B3255"   src="{{image}}">\n          <!-- <div class="chat-list-title">{{chat.name}}</div>\n          <div class="chat-list-sub-title">{{chat.lastText}}</div>\n          <div class="chat-list-price"><strong>Rs. {{chat.price}}</strong></div>\n          <div class="chat-list-discount">{{chat.discout}} OFF </div> -->\n        </ion-item>\n      </ion-list>\n    </div>\n</ion-content>\n<ion-footer style="padding-top: 1%; padding-bottom: 1%">\n  <button class="center" ion-button round icon-left (click)="playSound()">\n      <div style="margin-top:2%; margin-bottom:2%">\n        <ion-icon name="volume-up" style="margin-right: 5%"></ion-icon>Reproducir sonido\n      </div>\n  </button>\n</ion-footer>\n'/*ion-inline-end:"/Users/dianasilva/Documents/Sebastian/Testa/App/Layout/src/pages/categorias/categorias.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
     ], CategoriasPage);
     return CategoriasPage;
+    var _a;
 }());
 
 //# sourceMappingURL=categorias.js.map
