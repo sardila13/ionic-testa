@@ -14,3 +14,94 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+page-content .ropciones {
+  width: 94%;
+  height: 4em;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.categorias {
+  background: #4081BF;
+  background: -webkit-gradient(linear, left top, right top, from(#4081BF), color-stop(50%, #40A6BF), to(#4081BF));
+  background: linear-gradient(to right, #4081BF 0%, #40A6BF 50%, #4081BF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$left', endColorstr='$right',GradientType=0);
+}
+
+.rchat-list-wrap .list {
+  margin: 0;
+}
+
+.rchat-list-wrap .list .item {
+  margin: 0;
+  padding: 20px 10px;
+  background-color: #1B3255;
+  /*  @include background-horizontal($blue-48, $blue-4a, $blue-48);*/
+  color: #FFF;
+  border: 0px solid #DEDEDE;
+}
+
+.rchat-list-wrap .list .item .item-inner {
+  border-bottom: none;
+}
+
+.rchat-list-wrap .list .item .item-inner .label {
+  margin: 0;
+}
+
+.rchat-list-wrap .list .item .item-inner .label img {
+  float: left;
+  max-height: 120px;
+  max-width: 120px;
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
+  border: 2px solid #FFF;
+  border-radius: 20%;
+}
+
+.rchat-list-wrap .list .item .item-inner .label .chat-list-title {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.rchat-list-wrap .list .item .item-inner .label .chat-list-sub-title,
+.rchat-list-wrap .list .item .item-inner .label .chat-list-price {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.rchat-list-wrap .list .item .item-inner .label .chat-list-discount {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 5px;
+  color: #FFF;
+  font-size: 16px;
+  opacity: 1;
+  border-radius: 30px;
+  background: #4081BF;
+  background: -webkit-gradient(linear, left top, right top, from(#4081BF), color-stop(50%, #40A6BF), to(#4081BF));
+  background: linear-gradient(to right, #4081BF 0%, #40A6BF 50%, #4081BF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$left', endColorstr='$right',GradientType=0);
+}
+
+.rchat-list-wrap.grid-view .item {
+  float: left;
+  width: 50%;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.rchat-list-wrap.grid-view .item .item-inner .label img {
+  float: none;
+  margin-right: 0;
+}
+
+.dificultades {
+  background: #4081BF;
+  background: -webkit-gradient(linear, left top, right top, from(#4081BF), color-stop(50%, #40A6BF), to(#4081BF));
+  background: linear-gradient(to right, #4081BF 0%, #40A6BF 50%, #4081BF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$left', endColorstr='$right',GradientType=0);
+  color: #FFF;
+}

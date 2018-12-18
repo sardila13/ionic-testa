@@ -19,7 +19,7 @@ export class HomePage {
   ionViewDidLoad() {
     setTimeout(()=>{
     	this.iniciar();
-    }, 4000)
+    }, 1000)
   }
 
   
